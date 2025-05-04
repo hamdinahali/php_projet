@@ -1,0 +1,60 @@
+file_put_contents(__DIR__.'/debug.log', "ID reçu: ".$matchId.PHP_EOL, FILE_APPEND);ID reçu: 1
+2025-05-05 00:51:44 - Accès à match.php
+ID reçu: 1
+2025-05-05 00:52:02 - Accès à match.php
+ID reçu: 1
+2025-05-05 00:59:29 - Accès à match.php
+2025-05-05 00:59:29 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:32 - Accès à match.php
+2025-05-05 00:59:32 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:34 - Accès à match.php
+2025-05-05 00:59:34 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:35 - Accès à match.php
+2025-05-05 00:59:35 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:36 - Accès à match.php
+2025-05-05 00:59:36 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:37 - Accès à match.php
+2025-05-05 00:59:37 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:45 - Accès à match.php
+2025-05-05 00:59:45 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:46 - Accès à match.php
+2025-05-05 00:59:46 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:47 - Accès à match.php
+2025-05-05 00:59:47 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:50 - Accès à match.php
+2025-05-05 00:59:50 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:54 - Accès à match.php
+2025-05-05 00:59:54 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:55 - Accès à match.php
+2025-05-05 00:59:55 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:55 - Accès à match.php
+2025-05-05 00:59:55 - Accès
+ID reçu: 1
+Accès à index.php
+2025-05-05 00:59:57 - Accès à match.php
+2025-05-05 00:59:57 - Accès
+ID reçu: 1

@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /php_projet/public/
+
+# Redirige toutes les requêtes vers index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+
+# Autorise l'accès direct aux fichiers nécessaires
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|gif)$
