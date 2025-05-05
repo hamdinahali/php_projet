@@ -1,8 +1,13 @@
 <?php
+require_once __DIR__.'/../config/database.php';
+require_once __DIR__.'/../models/MatchModel.php';
 
-file_put_contents(__DIR__.'/debug.log', "Accès à index.php\n", FILE_APPEND);
-// ... reste du code
-require __DIR__.'/../config/bootstrap.php';
+$matchModel = new MatchModel($db);
+$upcomingMatches = $matchModel->getUpcomingMatches();
 
-header("Location: match.php?id=1");
-exit;
+// Ajout de l'image train.jpg
+$heroImage = '/php_projet/assets/images/tirain.jpg';
+
+require __DIR__.'/../views/header.php';
+require __DIR__.'/../views/home.php';
+require __DIR__.'/../views/footer.php';

@@ -1,10 +1,15 @@
-RewriteEngine On
-RewriteBase /php_projet/public/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /php_projet/public/
 
-# Redirige toutes les requêtes vers index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php [L]
+    # URLs propres
+    RewriteRule ^match/([0-9]+)/?$ match.php?id=$1 [NC,L,QSA]
 
-# Autorise l'accès direct aux fichiers nécessaires
-RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|gif)$
+    # Sécurité
+    RewriteRule ^(config|models|views) - [F,L]
+    Options -Indexes
+    DirectoryIndex index.php
+
+    # Redirection des erreurs
+    ErrorDocument 404 /php_projet/public/errors/404.php
+</IfModule>

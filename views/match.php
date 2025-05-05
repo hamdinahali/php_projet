@@ -1,33 +1,21 @@
-<div class="container mt-4">
-    <?php if($match): ?>
-        <h1><?= htmlspecialchars($match['home_team'] ?? '') ?> vs <?= htmlspecialchars($match['away_team'] ?? '') ?></h1>
-        
+<div class="row">
+    <div class="col-md-8">
+        <h1><?= htmlspecialchars($match['home_team']) ?> vs <?= htmlspecialchars($match['away_team']) ?></h1>
         <div class="card mb-4">
-            <div class="card-header">
-                Détails du match
-            </div>
+            <div class="card-header">Détails du match</div>
             <div class="card-body">
                 <p><strong>Date :</strong> <?= date('d/m/Y H:i', strtotime($match['match_date'])) ?></p>
-                <p><strong>Ligue :</strong> <?= htmlspecialchars($match['league']) ?></p>
                 <p><strong>Stade :</strong> <?= htmlspecialchars($match['stadium']) ?></p>
+                
+                <h3>Billets disponibles</h3>
+                <?php foreach($ticketCategories as $category): ?>
+                    <div class="mb-3">
+                        <h5><?= htmlspecialchars($category['name']) ?></h5>
+                        <p>Prix : <?= number_format($category['price'], 2) ?> €</p>
+                        <p>Places disponibles : <?= $category['quantity_available'] ?></p>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-
-        <h3>Billets disponibles</h3>
-        <?php if(!empty($ticketCategories)): ?>
-            <ul class="list-group">
-                <?php foreach($ticketCategories as $category): ?>
-                    <li class="list-group-item">
-                        <?= htmlspecialchars($category['name']) ?> - 
-                        <?= number_format($category['price'], 2) ?> €
-                        (<?= $category['quantity_available'] ?> disponibles)
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php else: ?>
-            <div class="alert alert-warning">Aucun billet disponible pour ce match.</div>
-        <?php endif; ?>
-    <?php else: ?>
-        <div class="alert alert-danger">Match non trouvé.</div>
-    <?php endif; ?>
+    </div>
 </div>
